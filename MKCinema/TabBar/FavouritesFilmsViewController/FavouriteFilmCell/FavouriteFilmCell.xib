@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteFilmCell" rowHeight="120" id="KGk-i7-Jjw" customClass="FavouriteFilmCell" customModule="MKCinema" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rRY-79-kEs" customClass="CacheImageView" customModule="MKCinema" customModuleProvider="target">
+                        <rect key="frame" x="12" y="0.0" width="67.5" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rRY-79-kEs" secondAttribute="height" multiplier="9:16" id="Yfr-Bi-ILW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U91-dU-onf">
+                        <rect key="frame" x="91.5" y="56.5" width="220.5" height="51.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="riB-iD-tHS">
+                        <rect key="frame" x="91.5" y="27.5" width="220.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="riB-iD-tHS" secondAttribute="trailing" constant="8" id="0T9-dh-Nn0"/>
+                    <constraint firstAttribute="bottom" secondItem="U91-dU-onf" secondAttribute="bottom" constant="12" id="C14-6B-6qK"/>
+                    <constraint firstAttribute="trailing" secondItem="U91-dU-onf" secondAttribute="trailing" constant="8" id="Ed2-zI-GBo"/>
+                    <constraint firstItem="riB-iD-tHS" firstAttribute="leading" secondItem="rRY-79-kEs" secondAttribute="trailing" constant="12" id="Hcs-3e-74x"/>
+                    <constraint firstAttribute="bottom" secondItem="rRY-79-kEs" secondAttribute="bottom" id="c0v-PG-g3S"/>
+                    <constraint firstItem="rRY-79-kEs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="eUD-CH-LcR"/>
+                    <constraint firstItem="U91-dU-onf" firstAttribute="top" secondItem="riB-iD-tHS" secondAttribute="bottom" constant="8" id="jQg-3b-0mW"/>
+                    <constraint firstItem="rRY-79-kEs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lHF-aj-Xla"/>
+                    <constraint firstItem="riB-iD-tHS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-22" id="ppw-hk-hgR"/>
+                    <constraint firstItem="U91-dU-onf" firstAttribute="leading" secondItem="rRY-79-kEs" secondAttribute="trailing" constant="12" id="t8v-5G-X5L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="filmDescriptionLabel" destination="U91-dU-onf" id="K2B-Nk-O7z"/>
+                <outlet property="filmImageView" destination="rRY-79-kEs" id="7dR-1D-g9N"/>
+                <outlet property="filmTitleLabel" destination="riB-iD-tHS" id="eB6-oK-DYs"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="141.29464285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

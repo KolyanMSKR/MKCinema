@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Films List View Controller-->
+        <scene sceneID="jcJ-6I-Xto">
+            <objects>
+                <viewController storyboardIdentifier="FilmsListViewController" id="1ny-Bp-kZ3" customClass="FilmsListViewController" customModule="MKCinema" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wK3-vx-czG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7nH-gY-PLE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1ny-Bp-kZ3" id="Xxv-GS-xgc"/>
+                                    <outlet property="delegate" destination="1ny-Bp-kZ3" id="BFV-jS-Fa3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W4K-ZY-uEb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7nH-gY-PLE" firstAttribute="leading" secondItem="W4K-ZY-uEb" secondAttribute="leading" id="FIr-a7-wXq"/>
+                            <constraint firstItem="W4K-ZY-uEb" firstAttribute="bottom" secondItem="7nH-gY-PLE" secondAttribute="bottom" id="Ua3-m9-sbn"/>
+                            <constraint firstItem="W4K-ZY-uEb" firstAttribute="trailing" secondItem="7nH-gY-PLE" secondAttribute="trailing" id="fbo-vA-A14"/>
+                            <constraint firstItem="7nH-gY-PLE" firstAttribute="top" secondItem="W4K-ZY-uEb" secondAttribute="top" id="hUB-zH-sl5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="7nH-gY-PLE" id="O7y-0u-DwY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CX-nX-ta0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="180"/>
+        </scene>
+        <!--Film Detail View Controller-->
+        <scene sceneID="UaR-h8-ocI">
+            <objects>
+                <viewController storyboardIdentifier="FilmDetailViewController" id="oZR-bo-nHc" customClass="FilmDetailViewController" customModule="MKCinema" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GGJ-rA-ui2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-Xy-dPQ" customClass="CacheImageView" customModule="MKCinema" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="374" height="249.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="I0w-Xy-dPQ" secondAttribute="height" multiplier="3:2" id="2mk-6p-Usd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title + year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IbP-kh-Ln6">
+                                <rect key="frame" x="20" y="347.5" width="374" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK3-55-r4a">
+                                <rect key="frame" x="30" y="399" width="354" height="443"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xxm-sA-W9e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xxm-sA-W9e" firstAttribute="trailing" secondItem="aK3-55-r4a" secondAttribute="trailing" constant="30" id="7M3-6N-8C5"/>
+                            <constraint firstItem="aK3-55-r4a" firstAttribute="leading" secondItem="Xxm-sA-W9e" secondAttribute="leading" constant="30" id="9HH-uQ-ghT"/>
+                            <constraint firstItem="IbP-kh-Ln6" firstAttribute="leading" secondItem="Xxm-sA-W9e" secondAttribute="leading" constant="20" id="G8J-o4-e2t"/>
+                            <constraint firstItem="IbP-kh-Ln6" firstAttribute="top" secondItem="I0w-Xy-dPQ" secondAttribute="bottom" constant="34" id="IB2-o7-Sga"/>
+                            <constraint firstItem="I0w-Xy-dPQ" firstAttribute="top" secondItem="Xxm-sA-W9e" secondAttribute="top" constant="20" id="R3z-sK-eJy"/>
+                            <constraint firstItem="Xxm-sA-W9e" firstAttribute="bottom" secondItem="aK3-55-r4a" secondAttribute="bottom" constant="20" id="U0Q-Kp-twP"/>
+                            <constraint firstItem="Xxm-sA-W9e" firstAttribute="trailing" secondItem="IbP-kh-Ln6" secondAttribute="trailing" constant="20" id="c9q-Qg-DoE"/>
+                            <constraint firstItem="aK3-55-r4a" firstAttribute="top" secondItem="IbP-kh-Ln6" secondAttribute="bottom" constant="20" id="ddV-Vl-SyA"/>
+                            <constraint firstItem="I0w-Xy-dPQ" firstAttribute="leading" secondItem="Xxm-sA-W9e" secondAttribute="leading" constant="20" id="kzO-eP-Vfn"/>
+                            <constraint firstItem="Xxm-sA-W9e" firstAttribute="trailing" secondItem="I0w-Xy-dPQ" secondAttribute="trailing" constant="20" id="qK8-yY-SRg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filmDescriptionTextView" destination="aK3-55-r4a" id="nwP-jW-sww"/>
+                        <outlet property="filmImageView" destination="I0w-Xy-dPQ" id="rkp-5V-Zud"/>
+                        <outlet property="filmTitleLabel" destination="IbP-kh-Ln6" id="azb-9j-KiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gw-M0-8k3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="179"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
